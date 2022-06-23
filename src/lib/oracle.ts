@@ -28,7 +28,7 @@ class Oracle {
       })
       .limit(1)
       .toArray();
-    if (savedData.length > 0) {
+    if (savedData.length > 0 && savedData[0].priceUSD > 0) {
       return {
         priceUSD: savedData[0].priceUSD,
         marketCapUSD: savedData[0].marketCapUSD,
